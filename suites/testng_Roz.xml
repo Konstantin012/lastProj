@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="selenium">
+    <test name="RozaRozetka">
+        <classes>
+            <class name="com.telesens.rozetka.RozetkaTests" />
+        </classes>
+    </test>
+    <!--    <test name="ChromeTest">-->
+    <!--        <parameter name="browser" value="chrome"></parameter>-->
+    <!--        <classes>-->
+    <!--            <class name="com.telesens.rozetka.RozetkaTests" />-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="FirefoxTest">-->
+    <!--        <parameter name="browser" value="firefox"></parameter>-->
+    <!--        <classes>-->
+    <!--            <class name="com.telesens.rozetka.RozetkaTests" />-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+</suite>
+
+
