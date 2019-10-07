@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 47.898 s <<< FAILURE! - in TestSuite
+authenticationSuccess(com.telesens.rozetka.RozetkaTests)  Time elapsed: 36.431 s  <<< FAILURE!
+java.lang.AssertionError: expected [РІРѕР№РґРёС‚Рµ РІ Р»РёС‡РЅС‹Р№ РєР°Р±РёРЅРµС‚] but found [войдите в личный кабинет]
+	at com.telesens.rozetka.RozetkaTests.authenticationSuccess(RozetkaTests.java:83)
+

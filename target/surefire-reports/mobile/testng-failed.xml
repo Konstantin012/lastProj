@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [mobile]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="rest(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.telesens.mobilerest.SubscriberTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="testDelete" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.telesens.mobilerest.SubscriberTests -->
+    </classes>
+  </test> <!-- rest(failed) -->
+</suite> <!-- Failed suite [mobile] -->

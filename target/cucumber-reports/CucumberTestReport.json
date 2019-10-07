@@ -1,0 +1,47 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2019-09-30T16:05:25.998Z",
+        "line": 7,
+        "name": "Неудачная авторизация",
+        "description": "",
+        "id": "тестируем-страницу-авторизации;неудачная-авторизация",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "Я нахожусь на домашней странице",
+            "match": {},
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@LoginProfile"
+          }
+        ]
+      }
+    ],
+    "name": "Тестируем страницу авторизации",
+    "description": "  сайта automationpractice.com с водом\n  заведомо неверных данных и проверяем\n  отображаемые сообщения об ошибках",
+    "id": "тестируем-страницу-авторизации",
+    "keyword": "Feature",
+    "uri": "file:src/main/resources/features/rozetka-sort.feature",
+    "tags": [
+      {
+        "name": "@LoginProfile",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="4" total="5" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2019-10-06T19:54:17 EEST" name="selenium" finished-at="2019-10-06T19:55:00 EEST" duration-ms="43379">
+    <groups>
+    </groups>
+    <test started-at="2019-10-06T19:54:17 EEST" name="RozaRozetka" finished-at="2019-10-06T19:55:00 EEST" duration-ms="43379">
+      <class name="com.telesens.rozetka.RozetkaTests">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.telesens.rozetka.RozetkaTests@24534cb0]" started-at="2019-10-06T19:54:17 EEST" name="setUp" finished-at="2019-10-06T19:54:23 EEST" duration-ms="5811" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.telesens.rozetka.RozetkaTests@24534cb0]" started-at="2019-10-06T19:54:23 EEST" name="setUp" finished-at="2019-10-06T19:54:23 EEST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="logTestStart(java.lang.reflect.Method, [Ljava.lang.Object;)[pri:0, instance:com.telesens.rozetka.RozetkaTests@24534cb0]" started-at="2019-10-06T19:54:23 EEST" name="logTestStart" finished-at="2019-10-06T19:54:23 EEST" duration-ms="39" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.telesens.rozetka.RozetkaTests.authenticationSuccess(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@6c1b82cd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestStart -->
+        <test-method signature="authenticationSuccess(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.telesens.rozetka.RozetkaTests@24534cb0]" started-at="2019-10-06T19:54:23 EEST" name="authenticationSuccess" data-provider="rozetkaTestAuthSuccessProvider" finished-at="2019-10-06T19:54:59 EEST" duration-ms="35761" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[koleox24@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234567890Roza#]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[konstantin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[РІРѕР№РґРёС‚Рµ РІ Р»РёС‡РЅС‹Р№ РєР°Р±РёРЅРµС‚]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [РІРѕР№РґРёС‚Рµ РІ Р»РёС‡РЅС‹Р№ РєР°Р±РёРЅРµС‚] but found [войдите в личный кабинет]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [РІРѕР№РґРёС‚Рµ РІ Р»РёС‡РЅС‹Р№ РєР°Р±РёРЅРµС‚] but found [войдите в личный кабинет]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at com.telesens.framework.page.BasePage.checkTextFromLocator(BasePage.java:54)
+at com.telesens.rozetka.page.HomePage.checAcountName(HomePage.java:112)
+at com.telesens.rozetka.RozetkaTests.authenticationSuccess(RozetkaTests.java:83)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:379)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:340)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:413)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authenticationSuccess -->
+        <test-method is-config="true" signature="logTestStop(java.lang.reflect.Method)[pri:0, instance:com.telesens.rozetka.RozetkaTests@24534cb0]" started-at="2019-10-06T19:54:59 EEST" name="logTestStop" finished-at="2019-10-06T19:54:59 EEST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.telesens.rozetka.RozetkaTests.authenticationSuccess(java.lang.String,java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestStop -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.telesens.rozetka.RozetkaTests@24534cb0]" started-at="2019-10-06T19:54:59 EEST" name="tearDown" finished-at="2019-10-06T19:55:00 EEST" duration-ms="684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.telesens.rozetka.RozetkaTests -->
+    </test> <!-- RozaRozetka -->
+  </suite> <!-- selenium -->
+</testng-results>

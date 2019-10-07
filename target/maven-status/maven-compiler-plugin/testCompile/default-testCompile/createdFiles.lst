@@ -1,0 +1,14 @@
+com\telesens\framework\page\BasePage.class
+com\telesens\rozetka\listener\TestListener.class
+com\telesens\rozetka\page\TShirtPage.class
+com\telesens\rozetka\page\HomePage.class
+com\telesens\rozetka\page\AccountDropListPage.class
+com\telesens\rozetka\page\MonitorPage.class
+com\telesens\mobilerest\SubscriberTests.class
+com\telesens\framework\test\WebDriverEventListenerImpl.class
+com\telesens\automationpractice\AuthTests.class
+com\telesens\automationpractice\page\HomePage.class
+com\telesens\framework\test\BaseTest.class
+com\telesens\rozetka\page\EnterToAccounPage.class
+com\telesens\rozetka\RozetkaTests.class
+com\telesens\automationpractice\page\AuthPage.class
