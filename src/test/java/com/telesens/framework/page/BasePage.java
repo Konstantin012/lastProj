@@ -29,21 +29,21 @@ public class BasePage {
     }
 
     protected void waitingUntilPresence(By locator, int time){
-        new WebDriverWait(driver, Duration.ofSeconds(time))
+        new WebDriverWait(driver, time)
                 .until(ExpectedConditions.presenceOfElementLocated(
                         locator
                 ));
     }
 
     protected void waitingExpectedElement(WebElement locator, int time){
-        new WebDriverWait(driver, Duration.ofSeconds(time))
+        new WebDriverWait(driver, time)
                 .until(ExpectedConditions.visibilityOf(
                         locator
                 ));
     }
 
     protected void waitingExpectedElementContaince(WebElement locator, int time, String value){
-        new WebDriverWait(driver, Duration.ofSeconds(time))
+        new WebDriverWait(driver, time)
                 .until(ExpectedConditions.attributeContains(
                         locator,"text",value
                 ));

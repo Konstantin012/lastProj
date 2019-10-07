@@ -1,7 +1,10 @@
 package com.telesens.framework.test;
 
+import io.qameta.allure.Attachment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -65,5 +68,10 @@ public class BaseTest {
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
         driver.quit();
+    }
+
+    @Attachment(value = "Page screenshot" ,type = "image/png")
+    public byte[] saveScreenshotPNG(){
+        return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
     }
 }

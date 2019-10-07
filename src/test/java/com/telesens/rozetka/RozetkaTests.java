@@ -2,9 +2,12 @@ package com.telesens.rozetka;
 
 import com.telesens.framework.page.BasePage;
 import com.telesens.framework.test.BaseTest;
+
+import com.telesens.rozetka.listener.TestListener;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.FileReader;
@@ -15,6 +18,8 @@ import java.util.Properties;
 
 import static com.telesens.rozetka.page.HomePage.startFromHome;
 
+
+@Listeners(TestListener.class)
 public class RozetkaTests extends BaseTest {
     private String loginRoz;
     private String passworRoz;
@@ -65,7 +70,7 @@ public class RozetkaTests extends BaseTest {
                 & allSortedPrices.get(allSortedPrices.size() - 1) < 40000);
     }
 
-    @Test(enabled = false,dataProvider = "rozetkaTestAuthSuccessProvider")
+    @Test(enabled = true,dataProvider = "rozetkaTestAuthSuccessProvider")
     public void authenticationSuccess(String login,String passwor, String ownAccountName, String acountSign)  {
         startFromHome(driver, baseUrl)
                 .clickOnAccount()
@@ -92,7 +97,7 @@ public class RozetkaTests extends BaseTest {
 
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void filterOrsay()  {
         startFromHome(driver, baseUrl)
         .selectTShirts()

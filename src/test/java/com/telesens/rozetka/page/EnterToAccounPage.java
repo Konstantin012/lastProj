@@ -1,6 +1,7 @@
 package com.telesens.rozetka.page;
 
 import com.telesens.framework.page.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -37,6 +38,7 @@ public class EnterToAccounPage extends BasePage {
     private String filledTriger = "auth-modal__form-input ng-dirty ng-valid ng-touched";
 
     //ACTION
+    @Step("Вводим логин {0} и пароль {1}")
     public EnterToAccounPage enterYourData(String log, String pas) {
         inputTextField(login, log);
         inputTextField(password, pas);

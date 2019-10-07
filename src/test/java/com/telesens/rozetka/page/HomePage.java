@@ -1,6 +1,7 @@
 package com.telesens.rozetka.page;
 
 import com.telesens.framework.page.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,8 +31,16 @@ Actions actions = new Actions(driver);
     public WebElement supportHeadNameWindow;
     public String supportHeadNameWindowLocator = "iframe#webWidget";
 
+    @FindBy(css = "body > app-root > div > div:nth-child(2) > div.app-rz-header > header > div > div.header-topline > div.header-topline__user.js-rz-auth > div.header-dropdown.header-dropdown_type_attention.email-verification")
+    public WebElement emailVerifyWindow;
+    public String emailVerifyWindowLocator = "body > app-root > div > div:nth-child(2) > div.app-rz-header > header > div > div.header-topline > div.header-topline__user.js-rz-auth > div.header-dropdown.header-dropdown_type_attention.email-verification";
+
     @FindBy(css = "a[class=\"header-topline__user-link link-dashed\"]")
     private WebElement ownAccount;
+
+    @FindBy(linkText = "Закрыть")
+    public WebElement closeEmailVerifyWindow;
+    public String closeEmailVerifyWindowLocator = "Закрыть";
 
 
     public HomePage(WebDriver driver){
@@ -66,6 +75,15 @@ Actions actions = new Actions(driver);
         }
     }
 
+    public void closeEmailVerifyWindow(){
+        waitingJava(1000);
+        if(tryFindElement(By.cssSelector(emailVerifyWindowLocator))){
+            if(tryFindElement(By.linkText(closeEmailVerifyWindowLocator))){
+                closeEmailVerifyWindow.click();
+            }
+        }
+    }
+
 
     public MonitorPage selectMonitors(){
         closeSupportWindow();
@@ -74,6 +92,7 @@ Actions actions = new Actions(driver);
         return new MonitorPage(driver);
     }
 
+    @Step("Кликаем по аккаунту")
     public EnterToAccounPage clickOnAccount() {
         ownAccount.click();
         waitingExpectedElement(new EnterToAccounPage(driver).mainWindowEnterAccount, 10);
@@ -81,6 +100,7 @@ Actions actions = new Actions(driver);
     }
 
     public AccountDropListPage openAccountDropList(){
+        closeEmailVerifyWindow();
         actions.moveToElement(ownAccount).perform();
         return new AccountDropListPage(driver);
     }
