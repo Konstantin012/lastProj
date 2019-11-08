@@ -27,7 +27,7 @@ public class BaseTest {
 
     @Parameters({"browser"})
     @BeforeClass(alwaysRun = true)
-    public void setUp(@Optional("chrome") String browser) throws Exception {
+    public void setUp(@Optional("firefox") String browser) throws Exception {
         String seleniumPaths = System.getProperty("browProp");
         if(seleniumPaths==null)
             seleniumPaths=SELENIUM_PATH_;
